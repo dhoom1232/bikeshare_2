@@ -24,21 +24,21 @@ def get_filters():
     
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input("Enter One City (Chicago - New york city - Washington): ")
+    city = input("Enter One City (Chicago - New york city - Washington): \n")
     while city.lower() not in CITY_DATA:
-        city = input("\nInvalid Input , Enter One Of Listed Cities ('chicago' , 'new york city' , 'washington'): ")
+        city = input("\nInvalid Input , Enter One Of Listed Cities ('chicago' , 'new york city' , 'washington'): \n")
 
 
     # get user input for month (all, january, february, ... , june)
     month = input("Enter Month ('all','january','february','march','april','may','june'): ")
     while month.lower() not in months:
-        month = input("\nInvalid Input , Enter One Of Listed Months ('all','january', 'february','march','april','may','june'): ")    
+        month = input("\nInvalid Input , Enter One Of Listed Months ('all','january', 'february','march','april','may','june'): \n")    
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input("Pick Day Of Week To Filter ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday') : ")
+    day = input("Pick Day Of Week To Filter ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday') : \n")
     while day.lower() not in days:
-     day = input("\nInvalid Input , Enter One Of Listed days ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday'): ")
+     day = input("\nInvalid Input , Enter One Of Listed days ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday'): \n")
 
     # To Make Things Clear And Easy
     city = city.lower()
