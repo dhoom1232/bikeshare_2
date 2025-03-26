@@ -32,13 +32,13 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input("Enter Month ('all','january','february','march','april','may','june'): ")
     while month.lower() not in months:
-        month = input("\nInvalid Input , Enter One Of Listed Months ('all','january', 'february','march','april','may','june'): \n")    
+        month = input("\nInvalid Input , Enter One Of Listed Months ('all','january', 'february','march','april','may','june'): ")    
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input("Pick Day Of Week To Filter ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday') : \n")
+    day = input("Pick Day Of Week To Filter ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday') : ")
     while day.lower() not in days:
-     day = input("\nInvalid Input , Enter One Of Listed days ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday'): \n")
+     day = input("\nInvalid Input , Enter One Of Listed days ('all','sunday', 'saturday','monday','tuesday','wednesday','thursday','friday'): ")
 
     # To Make Things Clear And Easy
     city = city.lower()
@@ -198,9 +198,9 @@ def DisplayRawData(df):
         while True:
             print(df.head(counter))
             counter = counter + 5
-            RawDataAnswer = input('type More if you want to see more data or No to exit \n ')
+            RawDataAnswer = input('type More if you want to see more data or No to exit ')
             while RawDataAnswer.lower() not in ['more','no']:
-                    RawDataAnswer = input('Worng Input  Please Choose More Or No Only \n')
+                    RawDataAnswer = input('Worng Input  Please Choose More Or No Only ')
             if RawDataAnswer.lower() == 'no':
               break    
     elif answer.lower() == 'no':
@@ -217,7 +217,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         DisplayRawData(df)
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter yes or no.')
         if restart.lower() != 'yes':
             break
 
